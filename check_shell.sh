@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "\033[0;1mStart of shell check"
+echo -e "\033[0;1mStart of shell check \033[0;0m"
 find . -not -type d -name '*.sh' -exec shellcheck --enable=all {} +\
 | tee  shellcheck.txt || true 
 
