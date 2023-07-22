@@ -3,7 +3,7 @@
 echo "start of shell check"
 find . -not -type d -name '*.sh' -exec shellcheck --enable=all {} +  > shellcheck.txt
 
-len=$(cat shellcheck.txt | wc -w | cut -c 1)
+len=$(wc -w shellcheck.txt | cut -c 1)
 
 if [[ ${len} == "0" ]]
 then
